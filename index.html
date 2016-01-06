@@ -10,14 +10,36 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/food.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <h1>Food Inspector</h1>
+
+    <style>
+        h1,
+        p {
+            text-align: center;
+        }
+    </style>
+
+    <div class="container">
+    <h1 style="color:blue">Food Inspector</h1>
     <p>Search for a restaurant and find out about it's most recent inspection</p>
-    <input type="text" class="form-control" id="restaurantName" placeholder="Restaurant Name">
-    <button class="btn btn-default" type="submit">Button</button>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8">
+            <input type="text" class="form-control" id="restaurantName" placeholder="Restaurant Name">
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+            <button class="btn btn-danger" type="submit" style="width:100%;">Submit</button>
+        </div>
+
+    </div>
+
+    </div>
+
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
