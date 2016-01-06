@@ -24,19 +24,20 @@
     </style>
 
     <div class="container">
-    <h1 style="color:blue">Food Inspector</h1>
-    <p>Search for a restaurant and find out about it's most recent inspection</p>
+        <h1 style="color:blue">Food Inspector</h1>
+        <p>Search for a restaurant and find out about it's most recent inspection</p>
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-8">
-            <input type="text" class="form-control" id="restaurantName" placeholder="Restaurant Name">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                <input type="text" class="form-control" id="restaurantName" placeholder="Restaurant Name">
+            </div>
+
+            <div class="col-xs-12 col-sm-4">
+                <button class="btn btn-danger" type="submit" style="width:100%;" id="submitBtn">Submit</button>
+            </div>
+
         </div>
-
-        <div class="col-xs-12 col-sm-4">
-            <button class="btn btn-danger" type="submit" style="width:100%;">Submit</button>
-        </div>
-
-    </div>
+        <div id="restName"></div>
 
     </div>
 
@@ -46,6 +47,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/foodinspector.js"></script>
+
+    <script>
+        $('#submitBtn').on('click', function () {
+            var restName = $("#restaurantName").val();
+            foodInspectRecord(restName);
+            
+        })
+    </script>
 </body>
 
 </html>
