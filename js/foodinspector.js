@@ -19,12 +19,12 @@ function foodInspectRecord(storeName) {
 
 function processResult(data) {
     if (data.length == 0) {
-        alert("No establishment found at this address");
+        alert("Can't find this establishment: Error Code: Domo R.E. Gato");
         return null;
     }
     
     var mostRecent = data[0];
-    retVal = {"name": mostRecent.dba_name, "address": mostRecent.address, "risk": mostRecent.risk,
+    retVal = {"name": mostRecent.dba_name, "address": mostRecent.address, "risk": mostRecent.risk, "result": mostRecent.results,
              "inspection_date": mostRecent.inspection_date};
     
     updateScreen(retVal);
@@ -34,5 +34,5 @@ function processResult(data) {
 function updateScreen(restaraunt) {
     $("#restName").html("<br>" + restaraunt.name + "<br>" + restaraunt.address + "<br>" +
                        "Inspected on: " + restaraunt.inspection_date + "<br>" +
-                       "Risk: " + restaraunt.risk);
+                       "Risk: " + restaraunt.risk + "<br> Result: " + restaraunt.result);
 }
